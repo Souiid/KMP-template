@@ -20,9 +20,9 @@ enum class BottomBarItem(
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector
 ) {
-    HOME("Home", Route.Home, Icons.Filled.Home, Icons.Outlined.Home),
-    SEARCH("Search", Route.Search, Icons.Filled.Search, Icons.Outlined.Search),
-    PROFILE("Profile", Route.Profile, Icons.Filled.Person, Icons.Outlined.Person)
+    HOME("Home", Route.Home, AppIcon.Home, AppIcon.UnselectedHome),
+    SEARCH("Search", Route.Search, AppIcon.Search, AppIcon.UnselectedSearch),
+    PROFILE("Profile", Route.Profile, AppIcon.Profile, AppIcon.UnselectedProfile)
 }
 
 @Composable

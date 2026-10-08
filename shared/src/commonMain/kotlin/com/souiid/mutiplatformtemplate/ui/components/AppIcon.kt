@@ -1,0 +1,25 @@
+package com.souiid.mutiplatformtemplate.ui.components
+
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.material.icons.outlined.Home
+
+
+object AppIcon {
+
+    val Home = Icons.Default.Home
+    val Search = Icons.Default.Search
+    val Profile = Icons.Default.Person
+
+    val UnselectedHome = Icons.Outlined.Home
+    val UnselectedSearch = Icons.Outlined.Home
+    val UnselectedProfile = Icons.Outlined.Home
+
+    val EyeOpen = Icons.Default.Visibility
+    val EyeClose = Icons.Default.VisibilityOff
+
+}

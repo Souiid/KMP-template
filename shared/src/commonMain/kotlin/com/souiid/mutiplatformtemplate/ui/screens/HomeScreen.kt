@@ -4,42 +4,63 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.input.ImeAction
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
+import com.souiid.mutiplatformtemplate.ui.components.textfield.TTextField
+import com.souiid.mutiplatformtemplate.ui.components.textfield.TTextFieldType
 
 @Composable
 fun HomeScreen() {
+
+    var name by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var description by remember { mutableStateOf("") }
+
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         TText(
-            text = "Title",
+            text = "Home",
             style = TTextStyle.TITLE
         )
-        TText(
-            text = "Subtitle",
-            style = TTextStyle.SUBTITLE
+
+        TTextField(
+            value = name,
+            onValueChange = { name = it },
+            labelTitle = "Name"
         )
 
-        TText(
-            text = "Subtitle",
-            style = TTextStyle.BODY
+        TTextField(
+            value = email,
+            onValueChange = { email = it },
+            labelTitle = "Email",
+            type = TTextFieldType.EMAIL
         )
 
-        TText(
-            text = "Description",
-            style = TTextStyle.DESCRIPTION,
-            textDecoration = TextDecoration.Underline
+        TTextField(
+            value = password,
+            onValueChange = { password = it },
+            labelTitle = "Password",
+            type = TTextFieldType.PASSWORD,
+            imeAction = ImeAction.Done
         )
 
-        TText(
-            text = "Error",
-            style = TTextStyle.ERROR
+        TTextField(
+            value = description,
+            onValueChange = { description = it },
+            type = TTextFieldType.DESCRIPTION,
+            placeholder = "Ajoutez une description ici !"
         )
     }
+
 }
