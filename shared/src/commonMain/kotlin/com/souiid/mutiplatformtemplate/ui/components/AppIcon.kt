@@ -7,6 +7,8 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Search
 
 
 object AppIcon {
@@ -16,8 +18,8 @@ object AppIcon {
     val Profile = Icons.Default.Person
 
     val UnselectedHome = Icons.Outlined.Home
-    val UnselectedSearch = Icons.Outlined.Home
-    val UnselectedProfile = Icons.Outlined.Home
+    val UnselectedSearch = Icons.Outlined.Search
+    val UnselectedProfile = Icons.Outlined.Person
 
     val EyeOpen = Icons.Default.Visibility
     val EyeClose = Icons.Default.VisibilityOff
