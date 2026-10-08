@@ -1,0 +1,47 @@
+package com.souiid.mutiplatformtemplate.ui.components
+
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.vector.ImageVector
+import com.souiid.mutiplatformtemplate.ui.navigation.Route
+
+enum class BottomBarItem(
+    val label: String,
+    val route: Route,
+    val selectedIcon: ImageVector,
+    val unselectedIcon: ImageVector
+) {
+    HOME("Home", Route.Home, Icons.Filled.Home, Icons.Outlined.Home),
+    SEARCH("Search", Route.Search, Icons.Filled.Search, Icons.Outlined.Search),
+    PROFILE("Profile", Route.Profile, Icons.Filled.Person, Icons.Outlined.Person)
+}
+
+@Composable
+fun AppBottomBar(
+    selectedItem: BottomBarItem,
+    onItemSelected: (BottomBarItem) -> Unit
+) {
+    NavigationBar {
+        BottomBarItem.entries.forEach { item ->
+            NavigationBarItem(
+                selected = selectedItem == item,
+                onClick = { onItemSelected(item) },
+                icon = {
+                    Icon(
+                        imageVector = if (selectedItem == item) item.selectedIcon else item.unselectedIcon,
+                        contentDescription = item.label
+                    )
+                }
+            )
+        }
+    }
+}
