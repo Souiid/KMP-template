@@ -6,11 +6,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.text.input.ImeAction
+import com.souiid.mutiplatformtemplate.ui.components.button.TButton
+import com.souiid.mutiplatformtemplate.ui.components.button.TButtonType
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
 import com.souiid.mutiplatformtemplate.ui.components.textfield.TTextField
-import com.souiid.mutiplatformtemplate.ui.components.textfield.TTextFieldType
 
 @Composable
 fun HomeScreen() {
@@ -32,26 +32,22 @@ fun HomeScreen() {
             labelTitle = "Name"
         )
 
-        TTextField(
-            value = email,
-            onValueChange = { email = it },
-            labelTitle = "Email",
-            type = TTextFieldType.EMAIL
+        TButton(
+            text = "Primary",
+            onClick = {}
         )
 
-        TTextField(
-            value = password,
-            onValueChange = { password = it },
-            labelTitle = "Password",
-            type = TTextFieldType.PASSWORD,
-            imeAction = ImeAction.Done
+        TButton(
+            text = "Refuse",
+            type = TButtonType.REFUSE,
+            onClick = {}
         )
 
-        TTextField(
-            value = description,
-            onValueChange = { description = it },
-            type = TTextFieldType.DESCRIPTION,
-            placeholder = "Ajoutez une description ici !"
+        TButton(
+            text = "Text",
+            type = TButtonType.TEXT,
+            isUnderlined = true,
+            onClick = {}
         )
     }
 
