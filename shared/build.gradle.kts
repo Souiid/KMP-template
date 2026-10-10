@@ -59,6 +59,8 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kamel.image)
             implementation(libs.kamel.image.default)
+            implementation(libs.kotlinx.datetime)
+
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
