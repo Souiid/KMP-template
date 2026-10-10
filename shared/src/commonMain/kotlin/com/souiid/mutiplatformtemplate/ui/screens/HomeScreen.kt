@@ -6,6 +6,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.souiid.mutiplatformtemplate.ui.components.TScreen
 import com.souiid.mutiplatformtemplate.ui.components.button.TButton
 import com.souiid.mutiplatformtemplate.ui.components.button.TButtonType
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
