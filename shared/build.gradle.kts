@@ -60,6 +60,8 @@ kotlin {
             implementation(libs.kamel.image)
             implementation(libs.kamel.image.default)
             implementation(libs.kotlinx.datetime)
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
 
         }
         commonTest.dependencies {
