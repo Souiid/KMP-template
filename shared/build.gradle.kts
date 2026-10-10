@@ -57,6 +57,8 @@ kotlin {
             implementation(libs.material.icons.extended)
             implementation(libs.androidx.navigation.compose)
             implementation(libs.kotlinx.serialization.json)
+            implementation(libs.kamel.image)
+            implementation(libs.kamel.image.default)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
