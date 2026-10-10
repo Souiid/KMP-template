@@ -1,4 +1,4 @@
-package com.souiid.mutiplatformtemplate.ui.components
+package com.souiid.mutiplatformtemplate.ui.components.others
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row

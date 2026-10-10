@@ -1,28 +1,27 @@
-package com.souiid.mutiplatformtemplate.ui.components
+package com.souiid.mutiplatformtemplate.ui.components.others
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.outlined.Home
-import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.souiid.mutiplatformtemplate.ui.navigation.Route
+import mutiplatformtemplate.shared.generated.resources.Res
+import mutiplatformtemplate.shared.generated.resources.home
+import mutiplatformtemplate.shared.generated.resources.profile
+import mutiplatformtemplate.shared.generated.resources.search
+import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.stringResource
 
 enum class BottomBarItem(
-    val label: String,
+    val stringResource: StringResource,
     val route: Route,
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector
 ) {
-    HOME("Home", Route.Home, AppIcon.Home, AppIcon.UnselectedHome),
-    SEARCH("Search", Route.Search, AppIcon.Search, AppIcon.UnselectedSearch),
-    PROFILE("Profile", Route.Profile, AppIcon.Profile, AppIcon.UnselectedProfile)
+    HOME(Res.string.home, Route.Home, AppIcon.Home, AppIcon.UnselectedHome),
+    SEARCH(Res.string.search, Route.Search, AppIcon.Search, AppIcon.UnselectedSearch),
+    PROFILE(Res.string.profile, Route.Profile, AppIcon.Profile, AppIcon.UnselectedProfile)
 }
 
 @Composable
@@ -38,7 +37,7 @@ fun AppBottomBar(
                 icon = {
                     Icon(
                         imageVector = if (selectedItem == item) item.selectedIcon else item.unselectedIcon,
-                        contentDescription = item.label
+                        contentDescription = stringResource(item.stringResource)
                     )
                 }
             )

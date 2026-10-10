@@ -1,6 +1,7 @@
-package com.souiid.mutiplatformtemplate.ui.components
+package com.souiid.mutiplatformtemplate.ui.components.others
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
@@ -23,5 +24,7 @@ object AppIcon {
 
     val EyeOpen = Icons.Default.Visibility
     val EyeClose = Icons.Default.VisibilityOff
+
+    val ArrowBack = Icons.AutoMirrored.Filled.ArrowBack
 
 }

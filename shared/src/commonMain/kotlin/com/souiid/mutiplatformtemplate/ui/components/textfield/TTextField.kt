@@ -9,7 +9,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.input.*
-import com.souiid.mutiplatformtemplate.ui.components.AppIcon
+import com.souiid.mutiplatformtemplate.ui.components.others.AppIcon
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 
 @Composable

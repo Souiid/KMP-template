@@ -16,6 +16,10 @@ import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
 import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 import kotlinx.datetime.LocalTime
+import mutiplatformtemplate.shared.generated.resources.Res
+import org.jetbrains.compose.resources.stringResource
+import mutiplatformtemplate.shared.generated.resources.choose_a_hour
+import mutiplatformtemplate.shared.generated.resources.validate
 
 @Composable
 fun TTimeDialog(
@@ -45,7 +49,7 @@ fun TTimeDialog(
             ) {
 
                 TText(
-                    text = "Choisir une heure",
+                    text = stringResource(Res.string.choose_a_hour),
                     style = TTextStyle.SUBTITLE
                 )
 
@@ -67,7 +71,7 @@ fun TTimeDialog(
 
                 TButton(
                     modifier = Modifier.fillMaxWidth(),
-                    text = "Valider",
+                    text = stringResource(Res.string.validate),
                     enabled = selectedTime != null,
                     onClick = onConfirm
                 )

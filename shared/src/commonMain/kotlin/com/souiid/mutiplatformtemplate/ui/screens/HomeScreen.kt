@@ -10,12 +10,18 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.souiid.mutiplatformtemplate.ui.components.TScreen
+import com.souiid.mutiplatformtemplate.ui.components.others.TScreen
 import com.souiid.mutiplatformtemplate.ui.components.button.TButton
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
 import com.souiid.mutiplatformtemplate.ui.components.textfield.TTextField
 import com.souiid.mutiplatformtemplate.ui.theme.Dimens
+import mutiplatformtemplate.shared.generated.resources.Res
+import mutiplatformtemplate.shared.generated.resources.home
+import mutiplatformtemplate.shared.generated.resources.name
+import mutiplatformtemplate.shared.generated.resources.save
+import mutiplatformtemplate.shared.generated.resources.your_actual_name_is
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 
 @Composable
@@ -26,23 +32,23 @@ fun HomeScreen() {
 
     TScreen(verticalArrangement = Arrangement.Center) {
         TText(
-            text = "Home",
+            text = stringResource(Res.string.home),
             style = TTextStyle.TITLE
         )
 
         userName?.let {
-            TText("Your actual name is : $it")
+            TText(text = stringResource(Res.string.your_actual_name_is, it))
             Spacer(modifier = Modifier.size(Dimens.smallSpace))
         }
 
         TTextField(
             value = nameInput,
             onValueChange = { nameInput = it },
-            labelTitle = "Name"
+            labelTitle = stringResource(Res.string.name)
         )
 
         TButton(
-            text = "Save",
+            text = stringResource(Res.string.save),
             onClick = {
                 viewModel.updateUserName(nameInput)
             }

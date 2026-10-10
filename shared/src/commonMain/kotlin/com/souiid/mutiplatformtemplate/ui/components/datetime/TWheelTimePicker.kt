@@ -36,24 +36,13 @@ private val TIME_ITEM_HEIGHT = 52.dp
 
 @Composable
 fun TWheelTimePicker(
+    modifier: Modifier = Modifier,
     selectedTime: LocalTime?,
     minTime: LocalTime = LocalTime(0, 0),
     maxTime: LocalTime = LocalTime(23, 50),
     minuteStep: Int = 10,
     onTimeSelected: (LocalTime) -> Unit,
-    modifier: Modifier = Modifier
 ) {
-
-    require(minTime <= maxTime) {
-        "maxTime doit être supérieure ou égale à minTime"
-    }
-
-    require(
-        minuteStep in 1..60 &&
-                60 % minuteStep == 0
-    ) {
-        "minuteStep doit diviser 60"
-    }
 
     val hours = remember(
         minTime,

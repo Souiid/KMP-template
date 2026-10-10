@@ -16,6 +16,10 @@ import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
 import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 import kotlinx.datetime.LocalDate
+import mutiplatformtemplate.shared.generated.resources.Res
+import org.jetbrains.compose.resources.stringResource
+import mutiplatformtemplate.shared.generated.resources.choose_a_date
+import mutiplatformtemplate.shared.generated.resources.continu
 
 @Composable
 fun TDateDialog(
@@ -45,7 +49,7 @@ fun TDateDialog(
             ) {
 
                 TText(
-                    text = "Choisir une date",
+                    text = stringResource(Res.string.choose_a_date),
                     style = TTextStyle.SUBTITLE
                 )
 
@@ -66,7 +70,7 @@ fun TDateDialog(
 
                 TButton(
                     modifier = Modifier.fillMaxWidth(),
-                    text = "Continuer",
+                    text = stringResource(Res.string.continu),
                     enabled = selectedDate != null,
                     onClick = onConfirm
                 )

@@ -9,8 +9,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.souiid.mutiplatformtemplate.ui.components.AppBottomBar
-import com.souiid.mutiplatformtemplate.ui.components.BottomBarItem
+import com.souiid.mutiplatformtemplate.ui.components.others.AppBottomBar
+import com.souiid.mutiplatformtemplate.ui.components.others.BottomBarItem
 import com.souiid.mutiplatformtemplate.ui.screens.HomeScreen
 import com.souiid.mutiplatformtemplate.ui.screens.ProfileScreen
 import com.souiid.mutiplatformtemplate.ui.screens.SearchScreen
