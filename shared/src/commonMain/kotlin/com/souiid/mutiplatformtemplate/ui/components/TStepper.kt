@@ -19,7 +19,7 @@ fun TStepper(
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(Dimens.STANDARD_PADDING)
+        horizontalArrangement = Arrangement.spacedBy(Dimens.standardPadding)
     ) {
 
         TButton(

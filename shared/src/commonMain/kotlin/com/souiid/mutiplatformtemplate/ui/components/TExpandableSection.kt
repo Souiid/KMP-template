@@ -53,7 +53,7 @@ fun ExpandableSectionItem(
             .clickable {
                 expanded = !expanded
             }
-            .padding(Dimens.STANDARD_PADDING)
+            .padding(Dimens.standardPadding)
     ) {
 
         Row(
@@ -70,7 +70,7 @@ fun ExpandableSectionItem(
 
         if (expanded) {
 
-            Spacer(modifier = Modifier.height(Dimens.MEDIUM_SPACE))
+            Spacer(modifier = Modifier.height(Dimens.mediumSpace))
 
             content()
         }

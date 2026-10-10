@@ -34,14 +34,14 @@ fun TTimeDialog(
 
         Surface(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(Dimens.LARGE_RADIUS),
+            shape = RoundedCornerShape(Dimens.largeRadius),
             color = MaterialTheme.colorScheme.surface
         ) {
 
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(Dimens.LARGE_SPACE)
+                    .padding(Dimens.largeSpace)
             ) {
 
                 TText(
@@ -50,7 +50,7 @@ fun TTimeDialog(
                 )
 
                 Spacer(
-                    modifier = Modifier.height(Dimens.MEDIUM_SPACE)
+                    modifier = Modifier.height(Dimens.mediumSpace)
                 )
 
                 TWheelTimePicker(
@@ -62,7 +62,7 @@ fun TTimeDialog(
                 )
 
                 Spacer(
-                    modifier = Modifier.height(Dimens.MEDIUM_SPACE)
+                    modifier = Modifier.height(Dimens.mediumSpace)
                 )
 
                 TButton(

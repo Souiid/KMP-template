@@ -27,7 +27,7 @@ fun TButton(
     text: String,
     type: TButtonType = TButtonType.PRIMARY,
     onClick: () -> Unit,
-    shape: Shape = RoundedCornerShape(Dimens.MEDIUM_RADIUS),
+    shape: Shape = RoundedCornerShape(Dimens.mediumRadius),
     enabled: Boolean = true,
     isLoading: Boolean = false,
     isUnderlined: Boolean = false,
@@ -55,8 +55,8 @@ fun TButton(
                 if (isLoading) {
 
                     CircularProgressIndicator(
-                        modifier = Modifier.size(Dimens.PROGRESS_INDICATOR_SIZE),
-                        strokeWidth = Dimens.PROGRESS_STROKE_SIZE,
+                        modifier = Modifier.size(Dimens.progressIndicatorSize),
+                        strokeWidth = Dimens.progressStrokeSize,
                         color = MaterialTheme.colorScheme.onPrimary
                     )
 
@@ -87,8 +87,8 @@ fun TButton(
                 if (isLoading) {
 
                     CircularProgressIndicator(
-                        modifier = Modifier.size(Dimens.PROGRESS_INDICATOR_SIZE),
-                        strokeWidth = Dimens.PROGRESS_STROKE_SIZE,
+                        modifier = Modifier.size(Dimens.progressIndicatorSize),
+                        strokeWidth = Dimens.progressStrokeSize,
                         color = MaterialTheme.colorScheme.onPrimary
                     )
 
@@ -110,7 +110,7 @@ fun TButton(
                 } else {
                     modifier
                 },
-                contentPadding = PaddingValues(vertical = Dimens.TINY_SPACE)
+                contentPadding = PaddingValues(vertical = Dimens.tinySpace)
             ) {
                 Box(
                     contentAlignment = if (isTextAlignStart) Alignment.CenterStart else Alignment.Center

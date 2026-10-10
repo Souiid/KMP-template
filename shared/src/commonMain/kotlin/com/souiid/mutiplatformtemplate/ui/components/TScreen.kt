@@ -52,7 +52,7 @@ fun TScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .then(scrollModifier)
-                .padding(horizontal = Dimens.STANDARD_PADDING)
+                .padding(horizontal = Dimens.standardPadding)
                 .padding(bottom = if (bottomBar != null) bottomBarHeight else 0.dp),
             horizontalAlignment = horizontalAlignment,
             verticalArrangement = verticalArrangement
@@ -65,7 +65,7 @@ fun TScreen(
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .fillMaxWidth().
-                    padding(horizontal = Dimens.STANDARD_PADDING)
+                    padding(horizontal = Dimens.standardPadding)
             ) {
                 bottomBar()
             }

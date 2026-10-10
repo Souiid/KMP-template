@@ -36,7 +36,7 @@ fun TBottomSheet(
 
         Column(
             modifier = Modifier
-                .padding(horizontal = Dimens.STANDARD_PADDING)
+                .padding(horizontal = Dimens.standardPadding)
         ) {
 
             content()

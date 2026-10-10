@@ -32,10 +32,10 @@ fun TCard(
             1.dp,
             MaterialTheme.colorScheme.outlineVariant
         ),
-        shape = RoundedCornerShape(Dimens.MEDIUM_RADIUS)
+        shape = RoundedCornerShape(Dimens.mediumRadius)
     ) {
         Column(
-            modifier = Modifier.padding(Dimens.STANDARD_PADDING)
+            modifier = Modifier.padding(Dimens.standardPadding)
         ) {
             content()
         }

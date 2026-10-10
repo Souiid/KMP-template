@@ -46,7 +46,7 @@ fun TDialog(
                 if (textFieldLabel != null) {
 
                     Spacer(
-                        modifier = Modifier.height(Dimens.MEDIUM_SPACE)
+                        modifier = Modifier.height(Dimens.mediumSpace)
                     )
 
                     TTextField(

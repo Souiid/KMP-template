@@ -44,12 +44,12 @@ fun TSegmentedControl(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(Dimens.MEDIUM_RADIUS))
+            .clip(RoundedCornerShape(Dimens.mediumRadius))
             .background(
                 MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f)
             )
-            .padding(Dimens.TINY_PADDING),
-        horizontalArrangement = Arrangement.spacedBy(Dimens.TINY_SPACE)
+            .padding(Dimens.tinyPadding),
+        horizontalArrangement = Arrangement.spacedBy(Dimens.tinySpace)
     ) {
         options.forEachIndexed { index, option ->
 
@@ -90,12 +90,12 @@ fun TSegmentedControl(
                 modifier = Modifier
                     .weight(1f)
                     .height(24.dp)
-                    .clip(RoundedCornerShape(Dimens.MEDIUM_RADIUS))
+                    .clip(RoundedCornerShape(Dimens.mediumRadius))
                     .background(backgroundColor)
                     .border(
                         width = if (selected) 1.dp else 0.dp,
                         color = borderColor,
-                        shape = RoundedCornerShape(Dimens.MEDIUM_RADIUS)
+                        shape = RoundedCornerShape(Dimens.mediumRadius)
                     )
                     .clickable {
                         if (multiSelection) {
@@ -116,13 +116,13 @@ fun TSegmentedControl(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(Dimens.SMALL_SPACE)
+                    horizontalArrangement = Arrangement.spacedBy(Dimens.smallSpace)
                 ) {
                     option.icon?.let { icon ->
                         Icon(
                             imageVector = icon,
                             contentDescription = null,
-                            modifier = Modifier.size(Dimens.STANDARD_ICON_SIZE),
+                            modifier = Modifier.size(Dimens.standardIconSize),
                             tint = contentColor
                         )
                     }

@@ -3,19 +3,19 @@ package com.souiid.mutiplatformtemplate.ui.theme
 import androidx.compose.ui.unit.dp
 
 object Dimens {
-    val TINY_SPACE = 4.dp
-    val SMALL_SPACE = 8.dp
-    val MEDIUM_SPACE = 12.dp
-    val LARGE_SPACE = 18.dp
+    val tinySpace = 4.dp
+    val smallSpace = 8.dp
+    val mediumSpace = 12.dp
+    val largeSpace = 18.dp
 
-    val MEDIUM_RADIUS = 12.dp
-    val LARGE_RADIUS = 16.dp
+    val mediumRadius = 12.dp
+    val largeRadius = 16.dp
 
-    val TINY_PADDING = 4.dp
-    val STANDARD_PADDING = 16.dp
+    val tinyPadding = 4.dp
+    val standardPadding = 16.dp
 
-    val PROGRESS_INDICATOR_SIZE = 20.dp
-    val PROGRESS_STROKE_SIZE = 2.dp
+    val progressIndicatorSize = 20.dp
+    val progressStrokeSize = 2.dp
 
-    val STANDARD_ICON_SIZE = 18.dp
+    val standardIconSize = 18.dp
 }
