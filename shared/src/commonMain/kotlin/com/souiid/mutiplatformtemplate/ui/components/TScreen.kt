@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 
 @Composable
 fun TScreen(
@@ -51,7 +52,7 @@ fun TScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .then(scrollModifier)
-                .padding(horizontal = 16.dp)
+                .padding(horizontal = Dimens.STANDARD_PADDING)
                 .padding(bottom = if (bottomBar != null) bottomBarHeight else 0.dp),
             horizontalAlignment = horizontalAlignment,
             verticalArrangement = verticalArrangement
@@ -64,7 +65,7 @@ fun TScreen(
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .fillMaxWidth().
-                    padding(horizontal = 15.dp)
+                    padding(horizontal = Dimens.STANDARD_PADDING)
             ) {
                 bottomBar()
             }

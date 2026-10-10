@@ -16,18 +16,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.unit.dp
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
 import com.souiid.mutiplatformtemplate.ui.theme.Black
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 
 @Composable
 fun TButton(
+    modifier: Modifier = Modifier,
     text: String,
     type: TButtonType = TButtonType.PRIMARY,
     onClick: () -> Unit,
-    shape: Shape = RoundedCornerShape(12.dp),
-    modifier: Modifier = Modifier,
+    shape: Shape = RoundedCornerShape(Dimens.MEDIUM_RADIUS),
     enabled: Boolean = true,
     isLoading: Boolean = false,
     isUnderlined: Boolean = false,
@@ -55,8 +55,8 @@ fun TButton(
                 if (isLoading) {
 
                     CircularProgressIndicator(
-                        modifier = Modifier.size(20.dp),
-                        strokeWidth = 2.dp,
+                        modifier = Modifier.size(Dimens.PROGRESS_INDICATOR_SIZE),
+                        strokeWidth = Dimens.PROGRESS_STROKE_SIZE,
                         color = MaterialTheme.colorScheme.onPrimary
                     )
 
@@ -87,8 +87,8 @@ fun TButton(
                 if (isLoading) {
 
                     CircularProgressIndicator(
-                        modifier = Modifier.size(20.dp),
-                        strokeWidth = 2.dp,
+                        modifier = Modifier.size(Dimens.PROGRESS_INDICATOR_SIZE),
+                        strokeWidth = Dimens.PROGRESS_STROKE_SIZE,
                         color = MaterialTheme.colorScheme.onPrimary
                     )
 
@@ -110,7 +110,7 @@ fun TButton(
                 } else {
                     modifier
                 },
-                contentPadding = PaddingValues(vertical = 4.dp)
+                contentPadding = PaddingValues(vertical = Dimens.TINY_SPACE)
             ) {
                 Box(
                     contentAlignment = if (isTextAlignStart) Alignment.CenterStart else Alignment.Center

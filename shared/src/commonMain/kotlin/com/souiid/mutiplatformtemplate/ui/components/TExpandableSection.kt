@@ -15,8 +15,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 
 @Composable
 fun TExpandableSections(
@@ -53,7 +53,7 @@ fun ExpandableSectionItem(
             .clickable {
                 expanded = !expanded
             }
-            .padding(12.dp)
+            .padding(Dimens.STANDARD_PADDING)
     ) {
 
         Row(
@@ -70,7 +70,7 @@ fun ExpandableSectionItem(
 
         if (expanded) {
 
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(Dimens.MEDIUM_SPACE))
 
             content()
         }

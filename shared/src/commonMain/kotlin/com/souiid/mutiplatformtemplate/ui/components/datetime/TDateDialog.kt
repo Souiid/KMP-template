@@ -10,11 +10,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.souiid.mutiplatformtemplate.ui.components.button.TButton
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 import kotlinx.datetime.LocalDate
 
 @Composable
@@ -34,14 +34,14 @@ fun TDateDialog(
         Surface(
             modifier = Modifier
                 .fillMaxWidth(),
-            shape = RoundedCornerShape(24.dp),
+            shape = RoundedCornerShape(Dimens.LARGE_RADIUS),
             color = MaterialTheme.colorScheme.surface
         ) {
 
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(20.dp)
+                    .padding(Dimens.LARGE_SPACE)
             ) {
 
                 TText(
@@ -50,7 +50,7 @@ fun TDateDialog(
                 )
 
                 Spacer(
-                    modifier = Modifier.height(16.dp)
+                    modifier = Modifier.height(Dimens.MEDIUM_SPACE)
                 )
 
                 TWheelDatePicker(
@@ -61,7 +61,7 @@ fun TDateDialog(
                 )
 
                 Spacer(
-                    modifier = Modifier.height(20.dp)
+                    modifier = Modifier.height(Dimens.LARGE_SPACE)
                 )
 
                 TButton(

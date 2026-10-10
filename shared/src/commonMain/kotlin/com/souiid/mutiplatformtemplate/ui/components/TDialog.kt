@@ -5,18 +5,15 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.souiid.mutiplatformtemplate.ui.components.button.TButton
 import com.souiid.mutiplatformtemplate.ui.components.button.TButtonType
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.textfield.TTextField
 import com.souiid.mutiplatformtemplate.ui.components.textfield.TTextFieldType
-import com.souiid.mutiplatformtemplate.ui.theme.AppTheme
 import com.souiid.mutiplatformtemplate.ui.theme.Black
-
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 
 @Composable
 fun TDialog(
@@ -49,7 +46,7 @@ fun TDialog(
                 if (textFieldLabel != null) {
 
                     Spacer(
-                        modifier = Modifier.height(16.dp)
+                        modifier = Modifier.height(Dimens.MEDIUM_SPACE)
                     )
 
                     TTextField(

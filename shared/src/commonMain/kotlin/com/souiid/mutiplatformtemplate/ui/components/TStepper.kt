@@ -4,9 +4,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.unit.dp
 import com.souiid.mutiplatformtemplate.ui.components.button.TButton
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 
 @Composable
 fun TStepper(
@@ -19,7 +19,7 @@ fun TStepper(
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(16.dp)
+        horizontalArrangement = Arrangement.spacedBy(Dimens.STANDARD_PADDING)
     ) {
 
         TButton(

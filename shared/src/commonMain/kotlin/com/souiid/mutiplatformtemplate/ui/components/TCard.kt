@@ -12,11 +12,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 
 @Composable
-fun TCard(modifier: Modifier = Modifier.fillMaxWidth(),
-          onClick: () -> Unit,
-          content: @Composable () -> Unit) {
+fun TCard(
+    modifier: Modifier = Modifier.fillMaxWidth(),
+    onClick: () -> Unit,
+    content: @Composable () -> Unit
+) {
     Card(
         modifier = modifier
             .clickable {
@@ -29,10 +32,10 @@ fun TCard(modifier: Modifier = Modifier.fillMaxWidth(),
             1.dp,
             MaterialTheme.colorScheme.outlineVariant
         ),
-        shape = RoundedCornerShape(16.dp)
+        shape = RoundedCornerShape(Dimens.MEDIUM_RADIUS)
     ) {
         Column(
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(Dimens.STANDARD_PADDING)
         ) {
             content()
         }

@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
 
 data class SegmentItem(
     val title: String,
@@ -43,12 +44,12 @@ fun TSegmentedControl(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
+            .clip(RoundedCornerShape(Dimens.MEDIUM_RADIUS))
             .background(
                 MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f)
             )
-            .padding(4.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp)
+            .padding(Dimens.TINY_PADDING),
+        horizontalArrangement = Arrangement.spacedBy(Dimens.TINY_SPACE)
     ) {
         options.forEachIndexed { index, option ->
 
@@ -89,12 +90,12 @@ fun TSegmentedControl(
                 modifier = Modifier
                     .weight(1f)
                     .height(24.dp)
-                    .clip(RoundedCornerShape(14.dp))
+                    .clip(RoundedCornerShape(Dimens.MEDIUM_RADIUS))
                     .background(backgroundColor)
                     .border(
                         width = if (selected) 1.dp else 0.dp,
                         color = borderColor,
-                        shape = RoundedCornerShape(14.dp)
+                        shape = RoundedCornerShape(Dimens.MEDIUM_RADIUS)
                     )
                     .clickable {
                         if (multiSelection) {
@@ -115,13 +116,13 @@ fun TSegmentedControl(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(Dimens.SMALL_SPACE)
                 ) {
                     option.icon?.let { icon ->
                         Icon(
                             imageVector = icon,
                             contentDescription = null,
-                            modifier = Modifier.size(18.dp),
+                            modifier = Modifier.size(Dimens.STANDARD_ICON_SIZE),
                             tint = contentColor
                         )
                     }
