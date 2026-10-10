@@ -1,25 +1,28 @@
 package com.souiid.mutiplatformtemplate.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import com.souiid.mutiplatformtemplate.ui.components.TScreen
 import com.souiid.mutiplatformtemplate.ui.components.button.TButton
-import com.souiid.mutiplatformtemplate.ui.components.button.TButtonType
 import com.souiid.mutiplatformtemplate.ui.components.text.TText
 import com.souiid.mutiplatformtemplate.ui.components.text.TTextStyle
 import com.souiid.mutiplatformtemplate.ui.components.textfield.TTextField
+import com.souiid.mutiplatformtemplate.ui.theme.Dimens
+import org.koin.compose.koinInject
 
 @Composable
 fun HomeScreen() {
-
-    var name by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-    var description by remember { mutableStateOf("") }
+    val viewModel: HomeViewModel = koinInject()
+    val userName by viewModel.userName.collectAsState()
+    var nameInput by remember { mutableStateOf("") }
 
     TScreen(verticalArrangement = Arrangement.Center) {
         TText(
@@ -27,29 +30,22 @@ fun HomeScreen() {
             style = TTextStyle.TITLE
         )
 
+        userName?.let {
+            TText("Your actual name is : $it")
+            Spacer(modifier = Modifier.size(Dimens.smallSpace))
+        }
+
         TTextField(
-            value = name,
-            onValueChange = { name = it },
+            value = nameInput,
+            onValueChange = { nameInput = it },
             labelTitle = "Name"
         )
 
         TButton(
-            text = "Primary",
-            onClick = {}
-        )
-
-        TButton(
-            text = "Refuse",
-            type = TButtonType.REFUSE,
-            onClick = {}
-        )
-
-        TButton(
-            text = "Text",
-            type = TButtonType.TEXT,
-            isUnderlined = true,
-            onClick = {}
+            text = "Save",
+            onClick = {
+                viewModel.updateUserName(nameInput)
+            }
         )
     }
-
 }
